@@ -1,40 +1,82 @@
-# Using AI-Powered Chatbots to Capture and Share Tacit Knowledge in Organizations
-Research paper completed for **ISM 6255 – Knowledge Management & Business Intelligence** (Seattle Pacific University, August 2025).
+# AI Fairness in Toxicity Classification
 
----
+**Skills:** Python, Machine Learning, Natural Language Processing (NLP), Explainable AI (XAI), Fairness Analysis, XGBoost, SHAP, Predictive Modeling
 
 ## Overview
-This repository contains a class research paper exploring how **AI-powered chatbots** can support the capture and sharing of tacit knowledge in organizations.  
 
-The paper reviews peer-reviewed literature and case studies to evaluate how conversational AI can transform organizational knowledge management practices. It highlights practical opportunities, adoption challenges, and recommendations for future directions.  
+This project investigates whether AI-based toxicity detection models exhibit bias toward comments that reference certain identity groups. Using the Jigsaw Unintended Bias in Toxicity Classification dataset, we developed and compared multiple machine learning models to evaluate both predictive performance and fairness in automated content moderation systems.
 
-Although completed as a course requirement, this project reflects my ability to:  
-- Research and synthesize academic and industry sources  
-- Connect knowledge management theory with business intelligence practices  
-- Communicate technical concepts in a professional, applied context  
+The project combines machine learning and explainable AI techniques to better understand how model predictions are made and to assess potential ethical concerns in AI-driven decision-making.
 
----
+## Business Objectives
 
-## Abstract
-Tacit knowledge—embedded in employee experience and context—is one of the most difficult yet valuable organizational assets. Traditional methods like manuals or mentorship struggle to scale in modern workplaces.  
+- Detect and measure potential bias in AI-based toxicity classification models.
+- Compare the performance of multiple machine learning algorithms.
+- Evaluate the influence of identity-related features on predictions.
+- Promote transparency and responsible AI practices through explainable machine learning.
 
-This paper investigates how AI-powered chatbots can make tacit knowledge more visible and reusable. It covers chatbot evolution, NLP pipelines, integration with enterprise systems, and barriers such as digital literacy, trust, and motivation. Findings show that chatbots are most effective when paired with human-centered practices, creating living systems where knowledge becomes shareable across teams and generations.
+## Dataset
 
----
+**Dataset:** Jigsaw Unintended Bias in Toxicity Classification Dataset
 
-## Key Sections
-- **Foundations of Knowledge Management** – Tacit vs. explicit knowledge, SECI model, and BI links  
-- **Chatbots in KM** – Evolution from rule-based to generative AI, chatbot types, and applications  
-- **Case Studies** – WeKnow system, NLP pipelines, intergenerational transfer, shop-floor assistants  
-- **Challenges** – Trust, participation, digital literacy, integration, and governance  
-- **Recommendations** – Inclusive design, workflow integration, transparency, and pilot programs  
-- **Conclusion** – Chatbots as augmenters of human expertise, not replacements  
+- Approximately 450,000 online comments
+- Toxicity labels and subcategories
+- Identity attributes including gender, race, religion, sexual orientation, and disability references
+- Engagement and annotator information
 
----
+## Technologies
 
-## Skills Demonstrated
-- Academic research and APA-style writing  
-- Knowledge management and business intelligence concepts  
-- Evaluation of AI and NLP applications  
-- Critical analysis of adoption barriers and governance issues  
-- Professional communication of technical ideas  
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- XGBoost
+- SHAP
+- Matplotlib
+- Jupyter Notebook
+
+## Methodology
+
+### Data Preparation
+- Text preprocessing and cleaning
+- TF-IDF vectorization
+- Binary toxicity classification
+- Handling missing identity attributes
+- Feature engineering and dataset preparation
+
+### Machine Learning Models
+- Logistic Regression
+- Random Forest
+- XGBoost
+
+### Model Explainability
+- SHAP (SHapley Additive exPlanations) analysis to evaluate feature importance and model fairness.
+
+## Key Results
+
+| Model | Accuracy |
+|-------|-----------|
+| Logistic Regression | 0.5441 |
+| Random Forest | 0.5449 |
+| XGBoost | 0.5453 |
+
+## Key Findings
+
+- Vocabulary was the primary driver of model predictions.
+- Identity-related features had relatively low influence on predictions.
+- All models struggled to identify toxic comments due to class imbalance.
+- Human oversight remains important for real-world content moderation systems.
+
+## Repository Contents
+
+- `AI_Toxicity_Bias_Analysis_Report.pdf`
+- `AI_Toxicity_Bias_Analysis_Presentation.pdf`
+
+## Future Enhancements
+
+Potential improvements include:
+
+- Addressing class imbalance through resampling techniques.
+- Evaluating additional fairness metrics.
+- Exploring transformer-based NLP models.
+- Improving toxic comment detection while maintaining fairness and transparency.
